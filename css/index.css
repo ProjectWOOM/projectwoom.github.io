@@ -1,0 +1,25 @@
+.header-wrap {position: fixed; background-color: rgba(255, 255, 0, 0.3); width: 100%; height: 50px;}
+.header {width: 100%; height: 100%;}
+.header .logo {width: 120px; height: 30px; margin: 10px 0 0 20px;}
+.header .logo a {text-indent: -9999; color: transparent; font-size: 0; display: block; background-image: url(../img/logo.png); width: 120px; height: 30px; background-position: 0 0; background-repeat: no-repeat; background-size: cover;}
+.header .menu-btn {position: absolute; top: 0; right: 0; display: block; margin: 14px 20px 0 0; width: 30px; height: 22px;}
+.header .menu-btn span {display: block; width: 30px; height: 2px; background-color: #000; margin-top: 8px;}
+.header .menu-btn span:first-child {margin-top: 0px;}
+.header .menu-wrap {position: absolute; width: 100%; height: 100vh; top: 0; right: 0; bottom: 0; left: 0; background-color: #2f2f2f66;}
+.menu-list-wrap {position: absolute; top: 0; right: 0; width: 260px; height: calc(100% - 120px); padding: 60px 0 60px 40px; background-color: #2f2f2f;}
+.menu-wrap .menu-logo {}
+.menu-wrap .menu-logo img {width: 100px;}
+.menu-wrap .menu-close {color: #fff; position: absolute; top: 0; right: 0; margin: 20px 20px 0 0; width: 20px; height: 20px; background-color: #fff; text-indent: -9999; color: transparent; font-size: 0;}
+.menu-wrap .menu-list {margin-top: 50px;}
+.menu-wrap .menu-list .menu {color: #fff; display: block; margin: 30px 0 0 0; text-transform: uppercase; letter-spacing: 5px;}
+.menu-wrap .menu-list .sel {}
+.menu-wrap .menu-list .sel .bar {width: 200px; height: 10px; background-color: #fff;}
+
+.content-wrap {}
+.content {}
+
+.home-wrap {}
+.home-wrap .container {}
+.main-wrap {}
+.main-wrap h1 {}
+.main-wrap .typing {}

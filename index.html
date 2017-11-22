@@ -3,9 +3,11 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Project WOOM</title>
+    <link href="./img/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    
   </head>
   <body>
     <!-- PRELOADER -->
@@ -32,24 +34,70 @@
             <div class="menu-logo"><img src="./img/logo_white.png" alt="WOOM"></div>
             <button class="menu-close">Menu Close</button>
             <nav class="menu-list">
-              <a href="#home" class="menu sel">
-                Home<span class="bar"></span>
-              </a>
-              <a href="#about" class="menu">
-                About<span class="bar"></span>
-              </a>
-              <a href="#skills" class="menu">
-                Skills<span class="bar"></span>
-              </a>
-              <a href="#work" class="menu">
-                Work<span class="bar"></span>
-              </a>
-              <a href="#contact" class="menu">
-                Contact<span class="bar"></span>
-              </a>
-              <!-- <a href="#" class="menu">
-                Home<span class="bar"></span>
-              </a> -->
+              <ul class="menu-list-ul">
+                <li class="menu-list-li">
+                  <a href="#home" class="menu sel">
+                    Home<span class="bar"></span>
+                  </a>
+                </li>
+                <li class="menu-list-li">
+                  <a href="#about" class="menu">
+                    About<span class="bar"></span>
+                  </a>
+                </li>
+                <li class="menu-list-li">  
+                  <a href="#skills" class="menu">
+                    Skills<span class="bar"></span>
+                  </a>
+                </li>
+                <li class="menu-list-li">  
+                    <a href="#identity" class="menu">
+                      Identity<span class="bar"></span>
+                    </a>
+                  </li>
+                <li class="menu-list-li">
+                  <a href="#work" class="menu">
+                    Work<span class="bar"></span>
+                  </a>
+                  <ul class="work-list">
+                    <li class="work-page">
+                      <span class="bar"></span>
+                      <a href="./project/web/index.html" class="more">
+                        Publishing
+                      </a>
+                    </li>
+                    <li class="work-page">
+                      <span class="bar"></span>
+                      <a href="./project/design/index.html" class="more">
+                        Design
+                      </a>
+                    </li>
+                    <li class="work-page">
+                      <span class="bar"></span>
+                      <a href="./project/etc/index.html" class="more">
+                        ETC
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-list-li">
+                  <a href="#note" class="menu">
+                    Note<span class="bar"></span>
+                  </a>
+                </li>
+                <li class="menu-list-li">
+                  <a href="#contact" class="menu">
+                    Contact<span class="bar"></span>
+                  </a>
+                </li>
+                <!--
+                <li>
+                  <a href="#" class="menu">
+                    Home<span class="bar"></span>
+                  </a>
+                </li>
+              -->
+              </ul>
             </nav>
           </div>
         </div>
@@ -64,8 +112,8 @@
         <section class="home-wrap" id="home">
           <div class="container">
             <div class="main-wrap">
-              <h1>안녕하세요.</h1>
-              <p class="typing"></p>
+              <h1><img src="./img/logo.png" alt="Home Logo"></h1>
+              <p class="typing">안녕하세요. Project WOOM입니다.</p>
             </div>
           </div>
         </section>
@@ -75,16 +123,57 @@
         <section class="about-wrap" id="about">
           <div class="container">
             <div class="my-pic">
-              <!-- <img src="" alt="WOOM"> -->
+              <!-- <img src="./img/personal01.jpg" alt="WOOM"> -->
+              <div class="alpha-box"></div>
             </div>
             <div class="my-info">
-              <div class="my-info-speak">
-
-              </div>
-              <div class="my-info-about">
-
+              <div class="info-wrap">
+                <div class="speak-wrap">
+                  <!-- <h2>About</h2> -->
+                  <div class="speak">
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                    내가 하고싶은 말 자기 소개 그렇고 그런거 내가 하고싶은 말 자기 소개 그런거
+                  </div>
+                </div>
+                <div class="profile-wrap">
+                  <ul class="profile">
+                    <li>
+                      <span class="title">Name</span>:<span class="sub">Jeong Woo Min</span>
+                    </li>
+                    <li>
+                      <span class="title">Phone</span>:<span class="sub">+82 010 - 4049 - 0334</span>
+                    </li>
+                    <li>
+                      <span class="title">E-mail</span>:<span class="sub">project_woom@naver.com</span>
+                    </li>
+                    <li>
+                      <span class="title">Address</span>:<span class="sub">791-9, Seoun-ro, Anseong-si, Gyeonggi-do, RoK</span>
+                    </li>
+                    <li>
+                      <span class="title">Facebook</span>:<span class="sub">@projectwoom</span>
+                    </li>
+                    <li>
+                      <span class="title">Instagram</span>:<span class="sub">@project_woom</span>
+                    </li>
+                    <!-- <li>
+                      <span class="title">Instagram</span>: @project_woom
+                    </li> -->
+                  </ul>
+                </div>
               </div>
             </div>
+            <div class="list-dot">
+                <a class="dot-btn sel">
+                  <span class="dot">dot</span>
+                </a>
+                <a class="dot-btn">
+                  <span class="dot">dot</span>
+                </a>
+              </div>
           </div>
         </section>
         <!-- ABOUT END -->
@@ -92,22 +181,127 @@
         <!-- SKILLS START -->
         <section class="skills-wrap" id="skills">
           <div class="container">
-              
+            <div class="skills-head">
+              <h2>Skills<span class="bar"></span></h2>
+              <p>내 스킬이 어쩌구저쩌구<br />
+                뭐라 쓸까 고민이다.</p>
+            </div>
+            <div class="my-skills">
+              <ul class="skills-list">
+                <li>
+                  <dl>
+                    <dt>HTML</dt>
+                    <dd class="skills-html skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">94%</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>CSS</dt>
+                    <dd class="skills-css skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">88%</dd>                    
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Javascript</dt>
+                    <dd class="skills-javascript skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">85%</dd>                    
+                  </dl>
+                </li>            
+                <li>
+                  <dl>
+                    <dt>jQuery</dt>
+                    <dd class="skills-jquery skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">85%</dd>                    
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>php</dt>
+                    <dd class="skills-php skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">62%</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Photoshop</dt>
+                    <dd class="skills-ps skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">82%</dd>                    
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Illustrator</dt>
+                    <dd class="skills-ai skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">80%</dd>                    
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Premiere &amp; After Effect</dt>
+                    <dd class="skills-movie skills-dd">
+                      <div class="skills-bar"></div>
+                    </dd>
+                    <dd class="number">90%</dd>                    
+                  </dl>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <!-- SKILLS END -->
 
+        <!-- IDENTITY START -->
+        <section class="identity-wrap" id="identity">
+          <div class="container">
+            <div class="img-rotation">
+              
+            </div>
+            <p class="desc">
+              Project WOOM은 'Wannabe One Of Meaningful things', '의미있는 사람이 되고 싶은 사람'의 약자로,<br/>
+              모든 태그에 알맞은 사용법과 의미가 있듯이 나 자신도 의미있는 사람이 되고 싶은 마음에 지은 이름입니다.<br/>
+              <br/>
+              로고의 O 두개를 이용해 형상화한 무한대 기호 표시는 Project WOOM의 무한한 가능성을 의미합니다.  
+            </p>
+          </div>
+        </section>
+        <!-- IDENTITY END -->
+
         <!-- WORK START -->
         <section class="work-wrap" id="work">
           <div class="container">
-                
+            <h2>Work</h2>
           </div>
         </section>
         <!-- WORK END -->
         
+        <!-- NOTE START -->
+        <section class="note-wrap" id="note">
+          <div class="container">
+            <h2>Develope Note</h2>
+          </div>
+        </section>
+        <!-- NOTE END -->
+  
         <!-- CONTACT START -->        
         <section class="contact-wrap" id="contact">
           <div class="container">
+            <h2>Contact</h2>
                 
           </div>
         </section>
@@ -122,13 +316,8 @@
     <!-- FOOTER START -->
     <div class="footer-wrap">
       <div class="footer">
-        <div class="footer-logo"></div>
-        <div class="sns-wrap">
-          <ul>
-            <li><a href="#">FACEBOOK</a></li>
-            <li><a href="#">INSTAGRAM</a></li>
-            <!-- <li><a href="#">INSTAGRAM</a></li> -->
-          </ul>
+        <div class="footer-logo">
+          <img src="./img/logo_white.png" alt="Project WOOM">
         </div>
       </div>
     </div>
@@ -136,7 +325,7 @@
 
     <!-- SCRIPT START -->
     
-
+    <script type="text/javascript" src="./js/sidemenu.js"></script>
 
     <!-- SCRIPT END -->
   </body>

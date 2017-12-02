@@ -1,0 +1,27 @@
+/* MOBILE */
+@media screen and (max-width: 767px){
+    body {min-width: 480px;}
+    .content-wrap {width: 100%;}
+    .content {width: 100%;}
+
+    #home {position: relative; width: 100%; height: calc(100vh + 400px); background-color: #ff9999;}
+    .home-wrap {width: 400px; height: 100%; background-color: #000; margin: 0 auto;}
+
+    #about {position: relative; width: 100%; height: calc(100vh + 40px); background-color: #99ff99;}
+    .about-wrap {width: 400px; height: 100%; background-color: #fff; margin: 0 auto;}
+
+    #skills {position: relative; width: 100%; height: calc(100vh + 40px); background-color: #9999ff;}
+    .skills-wrap {width: 400px; height: 100%; background-color: #000; margin: 0 auto;}
+
+    #identity {position: relative; width: 100%; height: calc(100vh + 40px); background-color: #ffff99;}
+    .identity-wrap {width: 400px; height: 100%; background-color: #fff; margin: 0 auto;}
+
+    #work {position: relative; width: 100%; height: calc(100vh + 40px); background-color: #99ffff;}
+    .work-wrap {width: 400px; height: 100%; background-color: #000; margin: 0 auto;}
+
+    #note {position: relative; width: 100%; height: calc(100vh + 40px); background-color: #f9f9f9;}
+    .note-wrap {width: 400px; height: 100%; background-color: #fff; margin: 0 auto;}
+
+    #contact {position: relative; width: 100%; height: calc(100vh - 120px); background-color: #ff99ff;}
+    .contact-wrap {width: 400px; height: 100%; background-color: #000; margin: 0 auto;}
+}

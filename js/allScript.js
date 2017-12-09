@@ -13,8 +13,9 @@ if ( navigator.platform ) {
                 swipeToSlide: true,
                 touchMove : true
         
-              });
+              }); 
             //SLICK SLIDER
+            
     } else {
             $(document).ready(function(){
             //pc

@@ -3,7 +3,18 @@ var filter = "win16|win32|win64|mac|macintel";
 if ( navigator.platform ) {
     if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
             //mobile 
-            alert('mobile 접속'); 
+            //alert('mobile 접속'); 
+            //SLICK SLIDER
+            $('.slide-wrap').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                arrows: false,
+                swipeToSlide: true,
+                touchMove : true
+        
+              });
+            //SLICK SLIDER
     } else {
             $(document).ready(function(){
             //pc

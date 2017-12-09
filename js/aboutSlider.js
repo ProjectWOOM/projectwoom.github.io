@@ -2,12 +2,13 @@ $(document).ready(function(){
 
     $('.slide-wrap').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
         arrows: false,
         swipeToSlide: true,
         swipe: true,
-        mobileFirst: true
+        touchMove : true,
+        mobileFirst : true
 
       });
     

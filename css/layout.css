@@ -1,0 +1,341 @@
+.header-wrap {position: fixed; z-index: 9996; display: block; background-color: rgba(255, 255, 255, 0.3); width: 100%; height: 50px;}
+.header {width: 100%; height: calc(100% - 10px); padding-top: 10px;}
+.logo {width: 120px; height: 30px; margin: 0 0 0 20px;}
+.logo a {text-indent: -9999; color: transparent; font-size: 0; display: block; background-image: url(../img/logo.png); width: 120px; height: 30px; background-position: 0 0; background-repeat: no-repeat; background-size: cover;}
+.menu-btn {display: block; position: absolute; z-index: 9999; width: 30px; height: 22px; top: 0; right: 0; margin: 14px 20px 0 0; }
+/* basic-bar */
+.menu-btn span.basic-bar {display: block; position: absolute;  width: 30px; height: 2px; background-color: #000000; top: 0;}
+.basic-bar:first-child {margin-top: 0;}
+.basic-bar:nth-child(2) {margin-top: 10px;}
+.basic-bar:last-child {margin-top: 20px;}
+/* menu-btn */
+.menu-btn span.menu-bar {display: block; position: absolute;  width: 30px; height: 2px; background-color: #000000; top: 0;}
+.menu-btn span.menu-bar:first-child {
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-name: first-rotate;
+    -webkit-animation-name: first-rotate;
+    -moz-animation-name: first-rotate;
+    margin-top: 0px;
+    }
+@keyframes first-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+@-webkit-keyframes first-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+@-moz-keyframes first-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+.menu-btn span.menu-bar:nth-child(2) {
+    animation-duration: 0.5s;
+    animation-name: second-rotate;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: second-rotate;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: second-rotate;
+    width: 30px;
+    margin-top: 10px;
+}
+@keyframes second-rotate {
+    from {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+    to {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+}
+@-webkit-keyframes second-rotate {
+    from {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+    to {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+}
+@-moz-keyframes second-rotate {
+    from {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+    to {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+}
+.menu-btn span.menu-bar:nth-child(3) {
+    animation-duration: 0.5s;
+    animation-name: third-rotate;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: third-rotate;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: third-rotate;
+    margin-top: 20px;
+}
+@keyframes third-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+@-webkit-keyframes third-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+@-moz-keyframes third-rotate {
+    from {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+    to {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+}
+/* close-btn */
+.menu-btn span.close-bar {display: block; position: absolute; width: 30px; height: 2px; background-color: #ffffff; top: 0;}
+.menu-btn span.close-bar:first-child {
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-name: first-rotate1;
+    -webkit-animation-name: first-rotate1;
+    -moz-animation-name: first-rotate1;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    margin-top: 10px;
+    }
+@keyframes first-rotate1 {
+    from {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+}
+@-webkit-keyframes first-rotate1 {
+    from {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+}
+@-moz-keyframes first-rotate1 {
+    from {
+        margin-top: 0px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+}
+.menu-btn span.close-bar:nth-child(2) {
+    animation-duration: 0.5s;
+    animation-name: second-rotate1;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: second-rotate1;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: second-rotate1;
+    width: 0;
+    margin-top: 10px;
+}
+@keyframes second-rotate1 {
+    from {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+    to {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+}
+@-webkit-keyframes second-rotate1 {
+    from {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+    to {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+}
+@-moz-keyframes second-rotate1 {
+    from {
+        width: 30px;
+        margin-top: 10px;
+        background-color: #000000;
+    }
+    to {
+        width: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+}
+.menu-btn span.close-bar:nth-child(3) {
+    animation-duration: 0.5s;
+    animation-name: third-rotate1;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: third-rotate1;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: third-rotate1;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    margin-top: 10px;
+}
+@keyframes third-rotate1 {
+    from {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+}
+@-webkit-keyframes third-rotate1 {
+    from {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+}
+@-moz-keyframes third-rotate1 {
+    from {
+        margin-top: 20px;
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    to {
+        margin-top: 10px;
+        transform: rotate(-45deg);
+        background-color: #ffffff;
+    }
+}
+.menu-wrap {display: none; position: absolute; z-index: 9997; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100vh; background-color: #2f2f2f70;}
+.menu-side {margin-right: -300px; position: absolute; z-index: 9998; width: 240px; height: 100vh; padding-top:80px; padding-left: 30px; background-color: #2f2f2f; top: 0; right: 0;}
+.menu-logo {margin-bottom: 40px;}
+.menu-logo img {width: 100px;}
+.menu-list {padding-left: 4px;}
+.menu-list-ul {}
+.menu-list-li {margin-bottom: 20px;}
+.menu-list-li .menu {display: inline-block; color: #a2a2a2; font-size: 24px; height: 30px; line-height: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px;}
+.menu:hover {color: #ffffff;}
+.menu-list-li .sel {color: #ffffff;}
+.menu-list-li .sel span.bar {
+    position: relative; display: block; width: 100%; height: 4px;  background-color: #ffffff; padding-right: 14px; margin: -15px 0 0 -8px;
+    animation-duration: 0.5s;
+    animation-name: menu-sel;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: menu-sel;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: menu-sel;
+}
+@keyframes menu-sel{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes menu-sel{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-moz-keyframes menu-sel{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+.footer-wrap {position: relative; width: 100%; height: 160px; background-color: #2f2f2f;}
+.footer {padding-top: 55px;}
+.footer-logo {width: 200px; height: 50px; margin: 0 auto;}
+.footer-logo img {width: 200px; height: 50px;}

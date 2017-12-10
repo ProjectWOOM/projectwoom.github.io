@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <title>PUBLISHER W &#58; 21661115 정우민</title>
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        boxReposition('.toRight');
+        boxReposition('.toLeft');
+        boxReposition('.conWrapper > .con');
+        boxReposition2('.contactBox');
+        
+        var hidden = $('.hidden');
+        var header = $('header');
+        var headerShow = $('.headerShow');
+        var toDown = $('.toDown');
+        var toContents = $('.toContents');
+        var toRight = $('.toRight');
+        var toLeft = $('.toLeft');
+        var contentsBox = $('.contentsBox');
+        
+        hidden.click(function(){
+          header.stop().animate({'top':'-160px'});
+          headerShow.stop().animate({'margin-top':'30px'});
+        })
+        
+        headerShow.click(function(){
+          headerShow.stop().animate({'margin-top':'-60px'});
+          header.stop().animate({'top':'0px'});
+        })
+        
+        toDown.click(function(){
+          $('section > article').stop().animate({'margin-top':'-30%'});
+          $('.con').stop().animate({'margin-top':'-30%'});
+          $('.contact').stop().animate({'top':'0'});
+          header.stop().animate({'top':'-160px'});
+          headerShow.stop().animate({'margin-top':'-60px'});
+          toRight.stop().animate({'margin-top':'-40%'});
+          toLeft.stop().animate({'margin-top':'-40%'});
+        })
+        
+        toDown.mouseover(function(){
+          $('.toDown > span').stop().animate({'letter-spacing':'80px'});
+        })
+        toDown.mouseout(function(){
+          $('.toDown > span').stop().animate({'letter-spacing':'8px'});
+        })
+        
+        toContents.click(function(){
+          $('section > article').stop().animate({'margin-top':'0'});
+          $('.con').stop().animate({'margin-top':'-1%'});
+          $('.contact').stop().animate({'top':'100%'});
+          header.stop().animate({'top':'0px'});
+          headerShow.stop().animate({'margin-top':'-60px'});
+          toRight.stop().animate({'margin-top':'0'});
+          toLeft.stop().animate({'margin-top':'0'});
+        })
+        toContents.mouseover(function(){
+          $('.toContents > span').stop().animate({'letter-spacing':'80px'});
+        })
+        toContents.mouseout(function(){
+          $('.toContents > span').stop().animate({'letter-spacing':'8px'});
+        })
+        
+        var state = 0;
+        var percent = '100';
+        
+        toRight.click(function(){
+          if(state != 3) {
+            state = state + 1;
+            contentsBox.stop().animate({'margin-left':-(state * percent) + '%'});
+          } else if(state == 3) {
+            state = 0;
+            contentsBox.stop().animate({'margin-left':-(state * percent) + '%'});
+          }
+        })
+        
+        toLeft.click(function(){
+          if(state != 0) {
+            state = state - 1;
+            contentsBox.stop().animate({'margin-left':-(state * percent) + '%'});
+          } else if(state == 0) {
+            state = 3;
+            contentsBox.stop().animate({'margin-left':-(state * percent) + '%'});
+          }
+        })
+        
+        
+        $('.webpu').mouseover(function(){
+          $('.webpu').stop().animate({'margin-top':'5%'}, 'slow');
+          $('.webpublisher').stop().animate({'margin-top':'50px', opacity:1}, 'slow');
+          $('.know').stop().animate({'margin-top':'30px', opacity:1}, 'slow');
+         
+        })
+        
+        $('.webpu').mouseout(function(){
+          $('.webpu').stop().animate({'margin-top':'15%'}, 'slow');
+          $('.webpublisher').stop().animate({'margin-top':'-100px', opacity:0}, 'slow');
+          $('.know').stop().animate({'margin-top':'-100px', opacity:0}, 'slow');
+          
+        })
+        
+        var conBtn = $('.con > .header > nav > ul > li > a');
+        var content = $('.innerCon');
+        
+        conBtn.click(function(){
+          
+          var classValue = $(this).attr('id');
+          
+          if(!$(this).hasClass('active')) {
+            conBtn.removeClass('active');
+            $(this).addClass('active');
+            content.stop().fadeOut('fast', function() {
+              if($(this).hasClass(classValue)){
+                $(this).hasClass('show');
+                $(this).stop().fadeIn('fast');
+              }
+            })
+          }
+        })
+        
+        var studyBtn = $('.conten > ul > li > a');
+        
+        studyBtn.mouseover(function(){
+          var imgSrc = 'image/' + $(this).attr('id') + '.jpg';
+          
+          $('.conten > img').stop().fadeOut('fast', function(){
+              $(this).attr('src', imgSrc);
+              $(this).stop().fadeIn('fast');
+            })
+
+        })
+        
+      })
+      
+      $(window).resize(function(){
+        boxReposition('.toRight');
+        boxReposition('.toLeft');
+        boxReposition('.conWrapper > .con');
+        boxReposition2('.contactBox');
+      })
+      
+      $(window).load(function(){
+        boxReposition('.toRight');
+        boxReposition('.toLeft');
+        boxReposition('.conWrapper > .con');
+        boxReposition2('.contactBox');
+      })
+      
+      function boxReposition(box){
+        var windowHeight = $(window).height();
+        var boxHeight = $(box).height();
+        
+        $(box).css('top', (windowHeight - boxHeight)/2);
+      }
+      function boxReposition2(box){
+        var windowHeight = $(window).height();
+        var boxHeight = $(box).height();
+        
+        $(box).css('top', (windowHeight - boxHeight)/3);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>PUBLISHER W</h1>
+      <nav>
+        <ul>
+          <li><a class="hidden">숨기기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <a class="headerShow">보이기</a>
+      <a class="toLeft"><span>toLeft</span></a>
+      <a class="toRight"><span>toRight</span></a>
+      <article class="designBox">
+        <div class="topBox">
+        </div>
+        <div class="rightBox">
+        </div>
+        <div class="bottomBox">
+          <a class="toDown"><span>CONTACT</span></a>
+        </div>
+        <div class="leftBox">
+        </div>
+      </article>
+      <article class="contentsBox">
+        <div class="wholeWrapper">
+          <div class="conWrapper">
+            <div class="con main">
+              <div class="header">
+                <h2>WEB PUBLISHER</h2>
+                <nav>
+                  <ul>
+                    <li><a id="publisher" class="active">Web Publisher</a></li>
+                    <li><a id="aboutWeb">웹의 역사</a></li>
+                    <li><a id="ws">웹 표준</a></li>
+                    <li><a id="wa">웹 접근성</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="publisher innerCon show">
+                <a class="webpu">
+                  WEB<br />
+                  PUBLISHER
+                </a>
+                <p class="webpublisher">
+                  웹 개발 단계에서 전반적인 HTML, CSS, Script 등을<br />
+                  웹 표준, 웹 접근성에 맞게 디자이너가 디자인한 템플릿에 맞추어<br />
+                  홈페이지를 구축하는 직업
+                </p>
+                <p class="know">
+                  웹 퍼블리셔는 HTML, CSS, Java Script를 이용해<br />
+                  코딩을 진행하는 직업이기에 HTML, CSS, Java Script 외에도<br />
+                  웹 표준, 웹 접근성에 대한 기본 지식을 갖추고 있어야 한다.
+                </p>
+              </div>
+              <div class="aboutWeb innerCon">
+                <h3>WEB</h3>
+                <p>World Wide Web</p>
+                <p>HyperText 기능을 이용한 정보를 웹 브라우저라는 통일된 방법으로 찾아볼 수 있게 한 광역 정보 서비스로 쉽게 말해 인터넷망 자체를 웹이라고 한다.</p>
+                <img src="image/tim_berners_lee.jpg" alt="Time Berners Lee">
+                <p>유럽 입자 물리 연구소(CERN)에서 근무하던 물리학자 팀 버너스 리 (Tim Berners-Lee)가 1989년에 개발했다. 개발초기에는 동료들과 연구자료를 검색하거나 공유하기 위해 개발했으나 더 많은 사람들이 WWW를 자유롭게 이용할 수 있도록 특허 등록을 하지 않았다. 팀 버너스 리는 WWW 뿐만 아니라 HTTP 프로토콜을 제작하고, 웹브라우저로 HTML 문서를 연결하는 방법을 개발해냈다.</p>
+              </div>
+              <div class="ws innerCon">
+                <h3>웹 표준</h3>
+                <p class="sub"><strong>웹을 구현하기 위한 표준</strong>으로<br />모든 운영체제와 브라우저에서 항상 동일하게 보여지고 작동해야 한다.</p>
+                <div class="sub1">
+                  <h4>웹 표준의 중요성</h4>
+                  <p>웹 표준이 지켜져야 모든 사람들이 자유롭게 웹에 접근할 수 있고,<br />새로운 브라우저나 제품이 출시 되었을 경우에 혼란을 줄일 수 있다.<br />또, 콘텐츠와 디자인 제작과 유지 및 보수가 용이하고,<br />여러 기기와 호환해 사용해도 충돌 없이 사용이 가능하다.</p>
+                </div>
+                <div class="sub2">
+                  <h4>W3C<br /><span>World Wide Web Consortium</span></h4>
+                  <p>웹의 개발자 팀 버너스리를 중심으로 1994년에 설립된 국제 컨소시엄이다.<br />
+                  다양해지고 있는 하드웨어와 소프트웨어에 대한 요구사항을 충족시키고<br />웹이 미래에도 지속적으로 이용될 수 있도록 다양한 기술을 개발하고 있다.<br />대표적으로 HTML과 CSS의 표준을 지정했다.
+                  </p>
+                </div>
+                <div class="sub3">
+                  <h4>크로스 브라우징</h4>
+                  <p>어느 브라우저에서 웹을 이용해도 동일하게 보여지도록<br />웹 표준 기술을 이용해 웹을 구성하는 것을 의미하며,<br />웹 표준을 준수하여 코딩한다면 크로스 브라우징을 이용할 수 있다.<br />원한다면 CSS를 초기화해 각 브라우저에 맞는 기본값을 정해주거나,<br />각 브라우저의 버그나 일종의 편법을 사용할 수도 있다.</p>
+                </div>
+                <div class="sub4">
+                  <h4>접근 호환성</h4>
+                  <p>크로스 브라우징의 한 개념으로 브라우저 간의 호환성 뿐만 아니라 모든 사용자들에게 높은 접근성을 갖게 웹페이지를 구축하는 것을 뜻한다. 예시로 이미지가 제대로 표시되지 않는 사용자들을 위해 대체 텍스트를 작성하는 것도 접근 호환성을 갖추는 방법이 될 수 있다.</p>
+                </div>
+              </div>
+              <div class="wa innerCon">
+                <h3>웹 접근성<br /><span>Web Accessibility</span></h3>
+                <p>한국 정보화 진흥원 웹 접근성 연구소에서는 웹 접근성을<br /><strong>&#39;어떤 사용자(장애인, 노인 등), 어떤 기술환경에서도 사용자가 전문적인 능력 없이 웹 사이트에서 제공하는 모든 정보에 접근할 수 있도록 보장하는 것.&#39;</strong>으로 정의하고 있다.<br />이 조건은 특정 대상에 한정되지 않고 모든 사용자를 대상으로 하고 있으며,<br />즉, 웹 접근성은 모든 사용자를 유익하게 하는 것이 목적이라는 것이다.</p>
+               <div class="sub1">
+                 <h4>웹 접근성 비즈니스 케이스</h3>
+                 <p>웹 접근성 비즈니스에는 사회적, 기술적, 경제적, 법률 및 정책적 요소를 포함한다.</p>
+                 <div class="boxList">
+                   <dl class="box">
+                     <dt>사회적 요소</dt>
+                     <dd>장애를 가진 사람들에게<br />동등한 기회를 제공하기 위한 역할.<br />여기서 장애란<br />단순히 신체 관련 장애 뿐만 아니라<br />기기 이해도가 낮은 사용자,<br />열악한 환경, 고령자 등도 포함한다.</dd>
+                   </dl>
+                   <dl class="box">
+                     <dt>기술적 요소</dt>
+                     <dd>웹 서비스의 품질,<br />개발 및 유지 보수 비용 감소, <br />서버 부하 감소,<br />서비스 기간 상호운용성,<br />호환성과 같은<br />고급 웹 기술 관련 준비.</dd>
+                   </dl>
+                   <dl class="box">
+                     <dt>경제적 요소</dt>
+                     <dd>검색 엔진 최적화로<br />재정적 이익,<br />접근성과 모 바일을 함께 대응해<br />개발 및 유지보수 비용 감소.</dd>
+                   </dl>
+                   <dl class="box">
+                     <dt>법률 및 정책적 요소</dt>
+                     <dd>정부와 다른 기관의 법률,<br />정책, 규제, 표준, 지침 등에서<br />설명하는 웹 접근성의 요구사항이 존재.</dd>
+                   </dl>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conWrapper">
+            <div class="con mL">
+              <div class="header">
+                <h2>Mark-Up Language</h2>
+                <nav>
+                  <ul>
+                    <li><a id="html" class="active">HTML</a></li>
+                    <li><a id="css">CSS</a></li>
+                    <li><a id="js">Java Script</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="html innerCon show">
+                <h3>HTML</h3>
+                <dl>
+                  <dt>문단 요소 - 제목</dt>
+                  <dd>&lt;h1&gt;대제목&lt;/h1&gt;</dd>
+                  <dd>&lt;h2&gt;중제목&lt;/h2&gt;</dd>
+                  <dd>&lt;h3&gt;소제목&lt;/h3&gt;</dd>
+                  <dd>&lt;h4&gt;소소제목&lt;/h4&gt;</dd>
+                  <dd>&lt;h5&gt;소소소제목&lt;/h5&gt;</dd>
+                  <dd>&lt;h6&gt;제목은 블록요소&lt;/h6&gt;</dd>
+                  <dt>문단 요소 - 단락</dt>
+                  <dd>&lt;p&gt;&lt;/p&gt;</dd>
+                  <dt>문단 요소 - 줄 바꿈</dt>
+                  <dd>&lt;br /&gt;</dd>
+                  <dt>문단 요소 - 구분선</dt>
+                  <dd>&lt;hr /&gt;</dd>
+                  <dt>그룹화 요소</dt>
+                  <dd>&lt;div&gt;&lt;/div&gt;</dd>
+                  <dd>&lt;span&gt;&lt;/span&gt;</dd>
+                  <dt>하이퍼링크</dt>
+                  <dd>&lt;a href=&ldquo;&#35;&rdquo;&gt;&lt;/a&gt;</dd>
+                  <dt>이미지</dt>
+                  <dd>&lt;img src=&ldquo;경로&rdquo; alt=&ldquo;이미지 설명&rdquo;&gt;</dd>
+                  <dt>비순서형 목록 ul</dt>
+                  <dd>&lt;ul&gt;&lt;/ul&gt;</dd>
+                  <dd>자식 요소 &#58; &lt;li&gt;&lt;/li&gt;</dd>
+                  <dd>순서와 관계없는 목록</dd>
+                  <dt>순서형 목록 ol</dt>
+                  <dd>&lt;ol&gt;&lt;/ol&gt;</dd>
+                  <dd>자식 요소 &#58; &lt;li&gt;&lt;/li&gt;</dd>
+                  <dd>절차적인 목록 표시</dd>
+                  <dt>정의형 목록 dl</dt>
+                  <dd>&lt;dl&gt;&lt;/dl&gt;</dd>
+                  <dd>자식 요소 &#58; &lt;dt&gt;&lt;/dt&gt; (용어), &lt;dd&gt;&lt;/dd&gt; (용어 정의)</dd>
+                  <dd>정의형 목록 뿐만 아니라 주종관계가 성립되는 콘텐츠에 광범위하게 사용.</dd>
+                  <dt>텍스트 관련 요소</dt>
+                  <dd>&lt;strong&gt;강한 강조&lt;/strong&gt;</dd>
+                  <dd>&lt;em&gt;강조&lt;/em&gt;</dd>
+                  <dd>&lt;ins&gt;추가글&lt;/ins&gt;</dd>
+                  <dd>&lt;del&gt;삭제&lt;/del&gt;</dd>
+                  <dd>&lt;sup&gt;윗첨자&lt;/sup&gt;</dd>
+                  <dd>&lt;sub&gt;아랫첨자&lt;/sub&gt;</dd>
+                  <dt>테이블 관련 요소</dt>
+                  <dd>&lt;table&gt;&lt;/table&gt;</dd>
+                  <dd>&lt;tr&gt;행&lt;/tr&gt;</dd>
+                  <dd>&lt;th&gt;제목&lt;/th&gt;</dd>
+                  <dd>&lt;td&gt;내용&lt;/td&gt;</dd>
+                  <dd>&lt;td rowspan="n"&gt;으로 세로 셀 병&lt;/td&gt;</dd>
+                  <dd>&lt;td colspan="n"&gt;으로 가로 셀 병합&lt;/td&gt;</dd>
+                </dl>
+              </div>
+              <div class="css innerCon">
+                <h3>CSS</h3>
+                <dl>
+                  <dt>넓이, 높이</dt>
+                  <dd>width : 넓이</dd>
+                  <dd>height : 높이</dd>
+                  <dt>텍스트 관련</dt>
+                  <dd>color : 텍스트 색</dd>
+                  <dd>text-align : 텍스트 정렬</dd>
+                  <dd>text-decoration : 텍스트 꾸밈 요소</dd>
+                  <dd>font-size : 폰트 크기</dd>
+                  <dd>font-weight : 폰트 굵기</dd>
+                  <dd>font-family : 폰트 설정</dd>
+                  <dd>font-style : 폰트 스타일 (기울임 등)</dd>
+                  <dd>line-height : 행간 (높이와 같은 값이면 세로 중앙 정렬)</dd>
+                  <dd>letter-spacing : 자간</dd>
+                  <dt>여백</dt>
+                  <dd>padding : 안쪽 여백</dd>
+                  <dd>margin : 바깥쪽 여백</dd>
+                  <dt>display</dt>
+                  <dd>block - 블록 요소로</dd>
+                  <dd>inline-block - 내용에 꽉 차게</dd>
+                  <dd>none - 보이지 않음</dd>
+                  <dt>position</dt>
+                  <dd>absolute - 앞 뒤 블록에 영향을 받지 않음</dd>
+                  <dd>fixed - 고정</dd>
+                  <dd>relative - 앞 뒤 블록에 영향을 받음</dd>
+                  <dd>inline-block - 내용에 꽉 차게</dd>
+                  <dd>none - 보이지 않음</dd>
+                  <dt>background</dt>
+                  <dd>-color : 배경 색상</dd>
+                  <dd>-image : 배경 이미지</dd>
+                  <dd>-position : 배경 이미지의 위치 설정</dd>
+                  <dd>-repeat : 배경 이미지의 반복 설정</dd>
+                  <dd>-size : 배경 이미지의 사이즈 설정</dd>
+                  <dt>border</dt>
+                  <dd>border : (외곽선 굵기) (선의 모양) (선 색상)</dd>
+                  <dd>border-radius : 모서리 둥글게</dd>
+                  <dt>글씨 안 보이게 하기</dt>
+                  <dd>font-size: 0;</dd>
+                  <dd>text-indent: -9999;</dd>
+                  <dd>color: transparent</dd>
+                </dl>
+              </div>
+              <div class="js innerCon">
+                <h3>Java Script</h3>
+                <dl>
+                  <dt>변수 variable</dt>
+                  <dd>var 변수 이름 = 변수 값;</dd>
+                  <dd>값을 담는, 이름을 가진 컨테이너</dd>
+                  <dt>변수의 데이터 타입</dt>
+                  <dd>숫자 : Number</dd>
+                  <dd>문자 : String</dd>
+                  <dd>불리언 (참, 거짓) : Boolean</dd>
+                  <dd>오브젝트 : Object</dd>
+                  <dd>정의되지 않음 : Undefined</dd>
+                  <dd>값이 없음 : Null</dd>
+                  <dt>연산자</dt>
+                  <dd>대입 연산자 : +=, -=, *=, /=, %=</dd>
+                  <dd>비교 연산자 : ==(값 비교), ===(데이터타입까지 비교), != (같지 않음), &lt;=, &gt;= (부등호)</dd>
+                  <dd>산술 연산자 : +, -, *, /, %</dd>
+                  <dd>논리 연산자 : &amp;&amp;(and), ||(or)</dd>
+                  <dt>조건문</dt>
+                  <dd>if(조건){조건 성립}else{조건 성립 X}</dd>
+                  <dd>if(조건){조건1 성립}else if(조건 2){조건2 성립}else{아무 조건도 성립 X}</dd>
+                  <dt>배열</dt>
+                  <dd>var arr = [1, 2, 3, 4, 5];</dd>
+                  <dd>arr[0] = 1, arr[3] = 4</dd>
+                  <dt>반복문</dt>
+                  <dd>for(초기문; 조건문; 증감문) {조건문에 해당되는 경우 반복수행}</dd>
+                  <dt>함수 function</dt>
+                  <dd>function 함수이름(매개변수) {유효범위}</dd>
+                  <dd>함수이름(매개변수);로 함수 실행/dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="conWrapper">
+            <div class="con site">
+              <div class="header">
+                <h2>HTML 학습 사이트</h2>
+              </div>
+              <div class="conten">
+                <ul>
+                  <li><a href="http://div.or.kr/" target="_blank" id="divorkr">div.or.kr</a></li>
+                  <li><a href="http://webberstudy.com/" target="_blank" id="webber">Webber Study</a></li>
+                  <li><a href="https://opentutorials.org/" target="_blank" id="open">생활코딩</a></li>
+                </ul>
+                <img src="image/divorkr.jpg" alt="SiteImage">
+              </div>
+            </div>
+          </div>
+          <div class="conWrapper">
+            <div class="con aboutMe">
+              <div class="header">
+                <h2>JUNG WOO MIN</h2>
+              </div>
+              <div class="me" -ms-overflow-style: none;>
+                <div class="picture">사진</div>
+                <div class="profile">
+                  <ul class="file">
+                    <li>정우민</li>
+                    <li>WHAMOOP</li>
+                    <li>WOOM</li>
+                    <li>1997. 03. 31</li>
+                    <li>경기도 안성시 중리동</li>
+                    <li>
+                      <dl>
+                        <dt>학력</dt>
+                        <dd>삼죽초등학교 (2004 ~ 2009)</dd>
+                        <dd>안청중학교 (2010 ~ 2012)</dd>
+                        <dd>가온고등학교 (2012 ~ 2015)</dd>
+                        <dd>계원예술대학교 디지털 미디어 디자인과 (2016 ~)</dd>
+                      </dl>
+                    </li>
+                    <li>010 - 4049 - 0334</li>
+                    <li>hikpur@naver.com</li>
+                    <li>취미 : 그림그리기/음악 감상/가사 쓰기</li>
+                    <li>특기 : 랩</li>
+                  </ul>
+                  <ul class="skill">
+                    <h3>SKILL</h3>
+                    <li>
+                      <dl>
+                        <dt>HTML</dt>
+                        <dd><span class="ef">85%</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>CSS</dt>
+                        <dd><span class="ez">80%</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>Java Script</dt>
+                        <dd><span class="sz">60%</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>jQuery</dt>
+                        <dd><span class="fz">50%</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>PhotoShop</dt>
+                        <dd><span class="sf">65%</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>Illustrator</dt>
+                        <dd><span class="svz">70%</span></dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="contact">
+        <div class="wrapper">
+          <a class="toContents"><span>BACK</span></a>
+          <div class="contactBox">
+            <h2>CONTACT</h2>
+            <h3>LOGO</h3>
+            <p>
+              <span>WOOM</span><br />
+              I Wanna be One Of Meanings
+            </p>
+            <ul>
+              <li>
+                <dl>
+                  <dt>TEL</dt>
+                  <dd>010 - 4049 - 0334</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>e-Mail</dt>
+                  <dd>hikpur@naver.com</dd>
+                </dl>
+              </li>
+            </ul>
+            <p>THX FOR WHACHING!</p>
+          </div>
+      </article>
+    </section>
+    <footer>
+      <div>
+        KAYWON UNIVERSITY OF ART &amp; DESIGN<br />
+        21661115 JUNG WOO MIN<br />
+        Copyright 2017. WOOM all rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

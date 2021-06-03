@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>BOSS LOOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index_desktop.css">
+    <link rel="stylesheet" href="./css/index_tablet_v.css">
+    <link rel="stylesheet" href="./css/index_mobile.css">
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+  </head>
+  <body -ms-overflow-style: none;>
+    <header>
+      <h1 class="logo"><a>BOSS LOOP</a></h1>
+      <div class="thumbnail"><img scr="./img/logo.png"></div>
+      <nav class="pcMenu">
+        <ul>
+          <li><a class="menu1 sel">Main</a></li>
+          <li><a class="menu2">About</a></li>
+          <li><a class="menu3">Object</a></li>
+          <li><a class="menu4">Making</a></li>
+          <li><a class="menu5">Team</a></li>
+        </ul>
+      </nav>
+      <nav class="mobileMenu">
+        <ul>
+          <li><a class="menu1 sel">Main</a></li>
+          <li><a class="menu2">About</a></li>
+          <li><a class="menu3">Object</a></li>
+          <li><a class="menu4">Making</a></li>
+          <li><a class="menu5">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="con-wrap">
+      <div class="main-con">
+        <div class="main-con-video">
+          <video id="videoDesktop" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="./img/moviePoster.mp4">
+          </video>
+          <video id="videoMobile" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="./img/moviePoster_mobile.mp4">
+          </video>
+        </div>
+        <!--
+        <div class="main-con-txt">
+          <h2>Show your performance</h2>
+          <p>'Show your performances, interact with each other, and enjoy the world of looping!'</p>
+          <div class="play-btn">
+            <div class="play-btn-label">PLAY</div>
+          </div>
+          <div class="scroll-btn">
+            <div class="scroll-btn-label">SCROLL</div>
+          </div>
+        </div>
+        -->
+        <div class="movie-poster">
+          <div class="teamName"></div>
+          <div class="kaywon"></div>
+          <div class="team1"></div>
+          <div class="team2"></div>
+          <div class="where"></div>
+          <div class="teamMember"></div>
+        </div>
+      </div>
+      <div class="about-con page-content">
+        
+        <div class="intro">
+          <h2>About</h2>
+          <p class="intro-sub">Show your performance Project</p>
+          <div class="intro-txt">
+            'Show your performances, Interact with each other, and Enjoy the world of looping!'<br />
+            <br />
+            BOSS의 브랜드 메시지 '공연을 보여주고, 서로 상호작용을 하고, 반복의 세계를 즐기세요!'에서 힌트를 얻어<br />
+            다양한 사운드를 사용자가 직접 눌러가면서 하나의 영상과 음악을 만들어내는 형태로 자신만의 음악을<br />
+            찾아가며 만들고 즐기는, 브랜드가 지향하는 메시지를 소비자가 직접 경험하도록 하였습니다.<br />
+            <br />
+            'Show Your Performance'라는 슬로건 아래 효과적인 브랜드 경험을 할 수 있도록<br />
+            기타 이펙트 및 루프 스테이션과 동일한 방식인 발로 밟는 인터랙션을 통해 전시물을 작동시키는 '조작형 콘텐츠'와<br />
+            Loop 사운드를 시각화 한 '비주얼 콘텐츠'로 BOSS의 Loop 제품 컨셉을 활용하여<br />
+            음악을 누구나 쉽고 빠르게 이해하면서 흥미롭고 재밌는 새로운 경험을 만들어주고자 했습니다.
+          </div>
+        </div>
+        <div id="particles-js"></div>
+      </div>
+      <div class="object-con page-content">
+        <div class="object-con-wrap">
+          <h2>Visual Contents</h2>
+          <p class="object-sub">PROJECTION MAPPING</p>
+          <div class="object-img"></div>
+          <div class="object-txt">
+            청각을 시각화하는데 있어서 평면적인 프레임에는 한계가 있다.<br />
+            따라서 건물 외벽 뿐만 아니라 인테리어 공간, 오브제 등 프로젝터를 통해<br />
+            다양한 사운드를 사용자가 직접 눌러가면서 하나의 영상과 음악을 만들어내는 형태로<br />
+            자신만의 음악을 영사시킬 수 있는 모든 것드를 스크린으로 활용할 수 있는 프로젝션 맵핑을 선택하였다.<br />
+            <br />
+            음악이라는 것이 음의 확장으로 이루어지는 조합을 통해 만들어 진다는 점과,<br />
+            #bossloop 또한 다양한 사운드 소스들이 합쳐져 하나의 음악이 만들어 진다는 점에서 착안하였다.<br />
+            단순히 큰 오브젝트가 아닌 24개의 사면체들이 합쳐져 정육각형을 이루고<br />
+            그 안에서 사면체의 점, 선, 면을 통해 각기 다른 다양한 오브젝트를 도출해 낼 수 있다.
+          </div>
+        </div>
+      </div>
+      <div class="making-con page-content">
+        <div class="making-video-section">
+          <h2>Making-of</h2>
+          <div class="making-video">
+            <iframe src="https://player.vimeo.com/video/241998684" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="making-section1">
+          <h3>WHAT<br />WE DO</h3>
+          <div class="work-process">
+            <div class="process-wrap">
+                <div class="process focus">
+                    <h4>01</h4>
+                    <div class="process-text">
+프로젝션 맵핑을 시작<br/><br/>
+프로젝션 맵핑을 시작하기위해<br/>
+각자 리서치를 진행하다.<br/>
+</div>
+                    <img src="./img/what01.png" alt="">
+                  </div>
+                  <div class="process">
+                    <h4>02</h4>
+                    <div class="process-text">
+					  오브제 테스트 시작<br/><br/>
+						선정한 오브제를 10/1로 축소하여<br/>
+						제작후 맵핑작업을 연습하다.<br/>
+					  </div>
+                    <img src="./img/what02.png" alt="">
+                  </div>
+                  <div class="process">
+                    <h4>03</h4>
+                    <div class="process-text">
+						영상작업을 시작<br/><br/>
+						총 24개의 영상디자인 작업을<br/>
+						시작하였다.<br/>
+						과연 끝이 있을까..?<br/>
+					  </div>
+                    <img src="./img/what03.png" alt="">
+                  </div>
+                  <div class="process">
+                    <h4>04</h4>
+                    <div class="process-text">
+					 인터렉션 완성하기<br/><br/>
+						터치디자인 프로그램을 사용하여<br/>
+						인터렉션을 구현하였다.<br/>
+						
+					  </div>
+                    <img src="./img/what04.png" alt="">
+                  </div>
+                  <div class="process">
+                    <h4>05</h4>
+                    <div class="process-text">최종 아웃풋이 나오다.<br/><br/>
+						졸업작품의 끝이 보이기 시작했다.<br/>
+						이제 마지막 졸업전시만 화이팅 하자!<br/>
+					  </div>
+                    <img src="./img/what05.png" alt="">
+                  </div>
+            </div>
+            <div class="btn-box"> 
+              <button class="prev-btn arrow">PREV</button>
+              <button class="next-btn arrow">NEXT</button> 
+            </div>
+          </div>
+        </div>
+<!--
+        <div class="making-section2">
+          
+        </div>
+        <div class="making-section3">
+          
+        </div>
+-->
+      </div>
+      <div class="team-con page-content">
+        <h2>Our Team</h2>
+        <p class="team-sub">우리는 TEAM ANSI입니다.</p>
+        <div class="team-member">
+          <ul>
+            <li>
+              <a href="https://www.behance.net/18bono22d6">
+                <img src="./img/man_1_1.png" alt="신동주">
+              </a>
+                <dl>
+                  <dt>Dongju Sin</dt>
+                  <dd>Team Leader / Motion Graphic</dd>
+                </dl>
+            </li>
+            <li>
+              <a href="https://adorablej.github.io/">
+                <img src="./img/man_1_2.png" alt="이승주">
+              </a>
+                <dl>
+                  <dt>Seungju Lee</dt>
+                  <dd>Planning / Web Publishing</dd>
+                </dl>
+            </li>
+            <li>
+              <a href="https://www.behance.net/ghwls13030ba6">
+                <img src="./img/man_1_3.png" alt="전호진">
+              </a>
+                <dl>
+                  <dt>Hojin Jeon</dt>
+                  <dd>Design</dd>
+                </dl>
+            </li>
+            <li>
+              <a href="https://www.behance.net/bitter0203ab7b">
+                <img src="./img/man_1_4.png" alt="이혜원">
+              </a>
+                <dl>
+                  <dt>Hyewon Lee</dt>
+                  <dd>Design</dd>
+                </dl>
+            </li>
+            <li>
+              <a href="https://projectwoom.github.io/">
+                <img src="./img/man_1_5.png" alt="정우민">
+              </a>
+                <dl>
+                  <dt>Woomin Jeong</dt>
+                  <dd>Interaction / Motion Graphic</dd>
+                </dl>
+            </li>
+          </ul>
+        </div>
+        <div class="thanksTo">
+          <h3>Thanks To.</h3>
+          <div class="thank-txt">
+            신의철 교수님 : 아무것도 모르는 저희를 하나부터 열까지 좋은 작품을 만들 수 있게 가르쳐주쳐서 감사합니다.<br />
+            심한수 교수님 : 빔프로젝트부터 공간, 오브제 선반까지 대여해주셔서 감사합니다.<br />
+            미지 : 넌 우리팀이었어...★<br />
+            전시과 과사 : 빔프로젝트를 빌려주셔서 감사합니다.<br />
+            등등 도움을 주신 많은 분들께 감사드립니다.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+    
+    </footer>
+    
+    <!-------------------------------------------->
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script type="text/javascript" src="./js/particles.js"></script>
+    <script type="text/javascript">
+      (function($){
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+        jQuery(document).ready(function($){
+          if(!isMobile) {
+            // 원하는 작업
+            var mainBoolean = false;
+          
+          $('.menu1').on('click', function(){
+            console.log('menu1 Check');
+            mainBoolean = false;
+            $('html, body, div.con-wrap').stop().animate({scrollTop:0}, 500);
+            $('div.main-con').stop().animate({'margin-top':'0'}, 500);
+            
+          })
+          
+          
+          $('.menu2').on('click', function(){
+            console.log('menu2 Check');
+            mainBoolean = true;
+            $('html, body, div.con-wrap').stop().animate({scrollTop:0}, 500);
+            $('div.main-con').stop().animate({'margin-top':'-200%'}, 500);
+          })
+          
+          var $aboutconh = $('.about-con').height();
+          var $objectconh = $('.object-con').height();
+          var $makingconh = $('.making-con').height();
+          var $teamconh = $('.team-con').height();
+          
+          $('.menu3').on('click', function(){
+            console.log('menu3 Check');
+            mainBoolean = true;
+            $('html, body, div.con-wrap').stop().animate({scrollTop:$aboutconh}, 500);
+            $('div.main-con').stop().animate({'margin-top':'-200%'}, 500);
+          })
+          
+          var $2conh = $aboutconh + $objectconh;
+          var $3conh = $aboutconh + $objectconh + $makingconh;
+          
+          $('.menu4').on('click', function(){
+            console.log('menu4 Check');
+            mainBoolean = true;
+            $('html, body, div.con-wrap').stop().animate({scrollTop:$2conh}, 500);
+            $('div.main-con').stop().animate({'margin-top':'-200%'}, 500);
+          })
+          
+          $('.menu5').on('click', function(){
+            console.log('menu5 Check');
+            mainBoolean = true;
+            $('html, body, div.con-wrap').stop().animate({scrollTop:$3conh}, 500);
+            $('div.main-con').stop().animate({'margin-top':'-200%'}, 500);
+          })
+          
+          
+          $('.logo').on('click', function(){
+            mainBoolean = false;
+            $('.main-con').stop().animate({'margin-top':'0'}, 500);
+            $('.con-wrap').stop().animate({scrollTop:0}, 500);
+            $('nav > ul > li > a').removeClass('sel');
+            $('.menu1').addClass('sel');
+          })
+        
+          $('.scroll-btn-label').on('click', function(){
+            $('.main-con').stop().animate({'margin-top':'-200%'}, 500);
+            mainBoolean = true;
+            $('nav > ul > li > a').removeClass('sel');
+            $('.menu2').addClass('sel');
+          })
+          
+          
+          
+          $(".main-con").each(function () {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } else if (event.detail) delta = -event.detail / 3;
+                    var moveTop = null;
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(this).next() != undefined) {
+                            moveTop = $(this).next().offset().top;
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } 
+                    // 화면 이동 0.8초(800)
+                    $(this).stop().animate({
+                        'margin-top':'-200%'
+                    }, 500);
+                    mainBoolean = true;
+                });
+            });
+          
+          var $winScroll = $('html, body, div.con-wrap').scrollTop();
+          
+          
+          $(window).on('scroll', function() {
+            var scrollTop = $(window).scrollTop(),
+                $navEl = $('nav > ul > li > a'),
+                $page = $('.page-content');
+            
+            $.each($page, function(i, d){
+              var $el = $(d), top = $el.offset().top, limit = top+$el.height();
+              if(mainBoolean){
+                if(scrollTop >= top && scrollTop < limit){
+                  $navEl.removeClass('sel');
+                  $navEl.eq(i+1).addClass('sel');
+                }
+              }else if (!mainBoolean) {
+                $('nav > ul > li > a').removeClass('sel');
+                $('.menu1').addClass('sel');
+              }
+            });
+          });
+          }else if(isMobile){
+            $('.team-member > ul').slick(
+              {
+                autoplay : true,
+                autoplaySpeed : 6000,
+                speed : 500,
+                swipeToSlide : true
+              }
+            );
+
+            $('.slick-arrow').css({'display':'none'});
+          }
+        }); 
+        
+        
+        /*What We Do Slide*/
+        $('.process').eq(0).css({'opacity':'1'});
+        var btnClick = 0;
+        $('.prev-btn').on('click', function(){
+          if(btnClick > 0){
+            btnClick--;
+            $('.process-wrap').stop().animate({'margin-left':'-360' * btnClick + 'px'});
+            $('.process').stop().animate({'opacity':'0.2'});
+            $('.process').eq(btnClick).stop().animate({'opacity':'1'});
+          }
+        })
+        $('.next-btn').on('click', function(){
+          if(btnClick < $('.process').length - 1){
+            btnClick++;
+            $('.process-wrap').stop().animate({'margin-left':'-360' * btnClick + 'px'});
+            $('.process').stop().animate({'opacity':'0.2'});
+            $('.process').eq(btnClick).stop().animate({'opacity':'1'});
+          }
+        })
+
+
+      })(jQuery);
+    </script>
+    <script type="text/javascript">
+      
+            window.onload = function(){
+              setTimeout(function(){scrollTo(0,0)}, 10);
+            }
+
+    </script>
+  </body>
+</html>

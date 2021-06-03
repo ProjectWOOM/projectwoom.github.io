@@ -1,0 +1,106 @@
+@media screen and (min-width: 1280px){
+  
+  body {font-family: 'Roboto', sans-serif;}
+  body::-webkit-scrollbar {display:none;}
+  
+  header{position: fixed; width: 100%; height: 110px; *background-color: rgba(255, 0, 0, 0.5);  z-index: 9999; }
+
+  .thumbnail {display: none;}
+  
+  header h1 {position: absolute; top: 20px; left: 50px; background-image: url(../img/logo.png); background-repeat: no-repeat; background-size: contain; width: 170px; height: 70px;}
+  header h1 a {width: 100%; height: 100%; display: block; color: transparent; text-indent: -9999; font-size: 0;}
+
+  header nav.pcMenu {position: absolute; top: 40px; right: 100px;}
+  header nav.pcMenu ul {}
+  header nav.pcMenu ul li {float: left; margin: 0 18px;}
+  header nav.pcMenu ul li a {color: #aaa; font-size: 16px; font-weight: 300; display: block;width: 60px; height: 30px; line-height: 30px; text-align: center;}
+  header nav.pcMenu ul li a:hover {color: #ddd; font-size: 16px; font-weight: 300; display: block;width: 60px; height: 30px; line-height: 30px; text-align: center;}
+  header nav.pcMenu ul li a.sel { font-weight: 500; color: #fff; border-bottom: 5px solid #fff;}
+  header nav.mobileMenu {display: none;}
+  
+  
+  .con-wrap {width: 100%; height: 100%; position: absolute; }
+  
+  .main-con {position: absolute; width: 100%; height: 100%; background-color: #020202;   display: block; z-index: 9990; margin-top: 0%;}
+  .main-con-video {position:absolute; width: 100%; height: 100%; z-index: 90;}
+  .main-con-video video {width: 100%; height: 100%;}
+  .main-con-video video source {width: 100%; height: 100%;}
+  #videoMobile {display: none;}
+  
+  .main-con-txt {text-align: center; width: 60%; height: 100%; left: 20%; position: absolute;display: none;}
+  .main-con-txt h2 {font-size: 64px; font-weight: 700; color: #fff; letter-spacing: 3px; border-bottom: 10px solid #fff; display: inline-block; padding-bottom: 30px; margin-top: 27%;}
+  .main-con-txt p {color: #fff; margin-top: 50px; font-weight: 400; font-size: 18px;}
+  .main-con-txt div.play-btn {margin-top: 100px; }
+  .main-con-txt div.play-btn div.play-btn-label {color: #fff; width: 200px; height: 80px; margin: 0 auto; background-color: #ED534F; line-height: 80px; border-radius: 40px;}
+  .main-con-txt div.scroll-btn {position: absolute; bottom: 30px; color: #fff; width: 100%; height: 32px; display: block;}
+  .scroll-btn-label {width: 32px; height: 32px; background-image: url(../img/scrollIcon.png); background-repeat: no-repeat; background-size: cover; margin: 0 auto; font-size: 0; text-indent: -9999; color: transparent; cursor: pointer;}
+  
+  .movie-poster {display: block; position: absolute; width: 100%; height: 100%;}
+  .movie-poster .teamName {position: fixed; background-image: url(../img/poster/teamName.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 290px; height: 71px; top: 120px; left: 50px;}
+  .movie-poster .kaywon {position: absolute; background-image: url(../img/poster/kaywon.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 396px; height: 28px; right: 50px; top: 120px;}
+  .movie-poster .team1 {position: absolute; background-image: url(../img/poster/team1.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 265px; height: 378px; bottom: 40px; left: 50px;}
+  .movie-poster .team2 {position: fixed; background-image: url(../img/poster/team2.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 265px; height: 90px; bottom: 32px; left: 50px;}
+  .movie-poster .where {position: absolute; background-image: url(../img/poster/where.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 100%; height: 100px;
+  bottom: 40px; background-position: center;}
+  .movie-poster .teamMember {position: absolute; background-image: url(../img/poster/teamMember.png); background-repeat: no-repeat; background-size: contain; z-index: 100; width: 265px; height: 291px; bottom: 40px; right: 50px;}
+  
+  
+  #particles-js {width: 100%;
+    height: 100%;
+    position: absolute;}
+  
+  .about-con {clear: both; position: relative; width: 100%; height: 100%; background-color: #202020;}
+  .intro {width: 60%; top: 25%; left: 20%; position: absolute;}
+  .intro h2 {color: #fff; font-size: 64px; font-weight: 700; letter-spacing: 1px;}
+  .intro-sub {color: #9e9e9e; font-size: 32px; font-weight: 500; letter-spacing: 1px; margin-top: 20px;}
+  .intro-txt {color: #707172; margin-top: 50px; line-height: 27px; letter-spacing: 0.3px;}
+  
+  .object-con {clear: both; position: relative;  width: 100%; height: 100%; background-color: #202020;}
+  .object-con-wrap {width: 60%; top: 30%; right: 20%; position: absolute; text-align: right;}
+  .object-con-wrap h2 {color: #fff; font-size: 64px; font-weight: 700; letter-spacing: 1px;}
+  .object-sub {color: #9e9e9e; font-size: 32px; font-weight: 500; letter-spacing: 1px; margin-top: 20px;}
+  .object-img {}
+  .object-txt {color: #707172; margin-top: 50px; line-height: 27px; letter-spacing: 0.3px;}
+  
+  .making-con {clear:both; position: relative;  width: 100%; height: 200%; background-color: #202020;}
+  .making-video-section {width:100%; height: 50%; clear: both; background-color: #202020; position: relative;}
+  .making-video-section h2 {color: #fff; font-size: 64px; font-weight: 700; letter-spacing: 1px; text-align: right; display: block; padding-bottom: 15px; z-index: 3;padding-top: 150px;     padding-right: 20%; }
+  .making-video {width: 60%; height: 60%; background-color: #202020;  z-index: 2;    margin:  auto;}
+  .making-video iframe {width: 100%; height: 100%;}
+  
+  .making-section1 {clear: both; position: relative; width:100%; height: calc(25% - 200px); padding-top: 200px;}
+  .making-section1 h3 {position: absolute; left: 60px; font-size: 72px; color: #fff; top: 350px; font-weight: 700; z-index: 5;}
+  .work-process {position: absolute; }
+  .process-wrap {overflow: hidden; width: 2880px; padding-left: 1080px;}
+  .process {float: left; opacity:0.2; margin-right: 20px; width: 340px; height: 500px; }
+  .process img {bottom: 0;position: absolute; }
+  .process-text {color:#b9b9b9; margin: 20px 0;}
+  .process h4 {color: #fff; font-size: 100px; font-weight: 500; padding: 10px 0 0 20px;}
+  .btn-box {margin-left: 50px;}
+  .arrow {color: #fff; margin-left: 10px;}
+
+
+  .making-section2 {clear: both; width:100%; height: 25%;}
+  .making-section3 {clear: both; width:100%; height: 25%;}
+  
+  .team-con {clear:both; position: relative;  width: 100%; height: 100%; background-color: #202020;}
+  .team-con h2 {color: #fff; font-size: 64px; font-weight: 700; letter-spacing: 1px; padding-top: 140px; text-align: right; padding-right: calc(6% + 40px);}
+  .team-sub {color: #9e9e9e; font-size: 24px; font-weight: 500; letter-spacing: 1px; margin-top: -40px; margin-left: 6%; width: calc(88% - 40px); padding-left: 20px; padding-bottom: 16px; display: none;}
+  .team-member {width: 80%; margin: 50px 10% 0 10%;}
+  .team-member ul {width: 100%;}
+  .team-member ul li {width: 16%; float: left; margin: 0 2%;}
+  .team-member ul li a {width: 100%; display: block;}
+  .team-member ul li a img {width: 100%;}
+  .team-member ul li dl {text-align: center;}
+  .team-member ul li dl dt {color: #848484; font-size: 20px; font-weight: 500; margin-top: 20px;}
+  .team-member ul li dl dd {color: #818181; margin-top: 8px;}
+  .thanksTo {width: 100%; bottom: 30px;}
+  .thanksTo h3 {font-size: 20px; color: #3c3c3c; text-align: right; width: 16%; float: left; margin-top: 3px; margin-left: 30px;  margin-top: 50px;}
+  .thank-txt {float: left; color: #3c3c3c; line-height: 27px; margin-left: 20px; font-size: 14px;  margin-top: 50px;}
+  
+  
+  
+  footer {width: 100%; height: 80px; background-color: #020202; display: block; position: absolute; top: 700%; display: none;}
+  
+  
+}

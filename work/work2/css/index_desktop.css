@@ -76,7 +76,7 @@
   .process img {bottom: 0;position: absolute; }
   .process-text {color:#b9b9b9; margin: 20px 0;}
   .process h4 {color: #fff; font-size: 100px; font-weight: 500; padding: 10px 0 0 20px;}
-  .btn-box {margin-left: 50px;}
+  .btn-box {margin-left: 50px; position: absolute; margin-top: 120px;}
   .arrow {color: #fff; margin-left: 10px;}
 
 
